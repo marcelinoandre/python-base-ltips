@@ -1,26 +1,27 @@
 # /usr/bim/env python3
 """Imprime a tabuada do 1 ao 10.
-Tabuada do número: 1
-1  x 1 = 1
-1  x 2 = 2
-1  x 3 = 3
+---Tabuada do 1---
+    1 X 1 = 1     
+    1 X 2 = 2     
+    1 X 3 = 3  
+##################    
 ...
-____________________
-Tabuada do número: 2
-2  x 1 = 2
-2  x 2 = 4
-2  x 3 = 6
+---Tabuada do 2---
+    2 X 1 = 2     
+    2 X 2 = 4     
+    2 X 3 = 6  
 ...
-____________________
+##################
 """
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 __autor__ = 'Andre Marcelino'
 
 numeros = list(range(1, 11))
 
-for numero in numeros:
-    print('Tabuada do número:', numero)
-    for outro_numero in numeros:
-        print(f'{numero}  x {outro_numero} = {numero * outro_numero}')
+for n1 in numeros:
+    print('{:-^18}'.format(f'Tabuada do {n1}') )
+    for n2 in numeros:
+        resultado = n1 * n2
+        print('{:^18}'.format(f"{n1} X {n2} = {resultado}"))
 
-    print('____________________')
+    print('#' * 18)
